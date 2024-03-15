@@ -1,3 +1,14 @@
 context:
   initializer:
     classes: org.pegasus.demo.AppInitializer
+
+datasource:
+  schema: public
+  host: 'localhost:5432'
+
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+    default-schema: ${datasource.schema}
+      parameters:
+        schema: ${datasource.schema}

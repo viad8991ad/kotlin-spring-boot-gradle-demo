@@ -1,1 +1,5 @@
-# TODO properties fot dev
+datasource:
+  password: password
+  database: devdb
+  username: devdb_owner
+  host: localhost
